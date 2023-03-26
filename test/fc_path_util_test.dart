@@ -3,27 +3,27 @@ import 'package:test/test.dart';
 
 void main() {
   test('isHiddenFile', () async {
-    expect(PathUtil.isHiddenFile('.DS_Store', false), true);
-    expect(PathUtil.isHiddenFile('.a.b', false, dotFiles: true), true);
-    expect(PathUtil.isHiddenFile('.DS_Store', true), false);
+    expect(FCPathUtil.isHiddenFile('.DS_Store', false), true);
+    expect(FCPathUtil.isHiddenFile('.a.b', false, dotFiles: true), true);
+    expect(FCPathUtil.isHiddenFile('.DS_Store', true), false);
   });
 
   test('trimExt', () async {
-    expect(PathUtil.trimExtension('aab', '.ke'), 'aab');
-    expect(PathUtil.trimExtension('aa.b', '.ke'), 'aa.b');
-    expect(PathUtil.trimExtension('aa.b.c', '.ke'), 'aa.b.c');
-    expect(PathUtil.trimExtension('.aa.b', '.ke'), '.aa.b');
-    expect(PathUtil.trimExtension('a.ke', '.ke'), 'a');
-    expect(PathUtil.trimExtension('a.b.ke', '.ke'), 'a.b');
-    expect(PathUtil.trimExtension('.a.ke', '.ke'), '.a');
-    expect(PathUtil.trimExtension('ke', '.ke'), 'ke');
+    expect(FCPathUtil.trimExtension('aab', '.ke'), 'aab');
+    expect(FCPathUtil.trimExtension('aa.b', '.ke'), 'aa.b');
+    expect(FCPathUtil.trimExtension('aa.b.c', '.ke'), 'aa.b.c');
+    expect(FCPathUtil.trimExtension('.aa.b', '.ke'), '.aa.b');
+    expect(FCPathUtil.trimExtension('a.ke', '.ke'), 'a');
+    expect(FCPathUtil.trimExtension('a.b.ke', '.ke'), 'a.b');
+    expect(FCPathUtil.trimExtension('.a.ke', '.ke'), '.a');
+    expect(FCPathUtil.trimExtension('ke', '.ke'), 'ke');
   });
 
   test('basenameAndExtensions', () async {
-    expect(PathUtil.basenameAndExtensions('a').toString(), 'a');
-    expect(PathUtil.basenameAndExtensions('a.b').toString(), 'a[.b]');
-    expect(PathUtil.basenameAndExtensions('a.b.c').toString(), 'a[.b.c]');
-    expect(PathUtil.basenameAndExtensions('.a').toString(), '[.a]');
-    expect(PathUtil.basenameAndExtensions('.a.b').toString(), '[.a.b]');
+    expect(FCPathUtil.basenameAndExtensions('a').toString(), 'a');
+    expect(FCPathUtil.basenameAndExtensions('a.b').toString(), 'a[.b]');
+    expect(FCPathUtil.basenameAndExtensions('a.b.c').toString(), 'a[.b.c]');
+    expect(FCPathUtil.basenameAndExtensions('.a').toString(), '[.a]');
+    expect(FCPathUtil.basenameAndExtensions('.a.b').toString(), '[.a.b]');
   });
 }
