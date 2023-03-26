@@ -18,4 +18,4 @@ void main() {
 
 ## Documentation
 
-[Documentation](https://pub.dev/documentation/fc_path_util/latest/fc_path_util/PathUtil-class.html)
+[Documentation](https://pub.dev/documentation/fc_path_util/latest/fc_path_util/FCPathUtil-class.html)
