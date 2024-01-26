@@ -3,22 +3,6 @@ import 'package:path/path.dart' as p;
 Set<String> _ignoredFiles = {'.DS_Store', 'Thumbs.db'};
 Set<String> _ignoredFolders = {'\$RECYCLE.BIN', 'System Volume Information'};
 
-class FCPathNameAndExtensions {
-  final String name;
-  final String extensions;
-
-  FCPathNameAndExtensions(this.name, this.extensions);
-
-  @override
-  String toString() {
-    var s = name;
-    if (extensions.isNotEmpty) {
-      s += '[$extensions]';
-    }
-    return s;
-  }
-}
-
 class FCPathUtil {
   /// Checks if the given file name is considered a hidden file.
   /// If [dotFiles] is true, file names starting with a dot(.) are considered hidden.
@@ -38,16 +22,5 @@ class FCPathUtil {
       return path.substring(0, path.length - ext.length);
     }
     return path;
-  }
-
-  /// Returns the basename and extensions of a given [path].
-  static FCPathNameAndExtensions basenameAndExtensions(String path) {
-    var bn = p.basename(path);
-    var idx = bn.indexOf('.');
-    if (idx < 0) {
-      return FCPathNameAndExtensions(bn, '');
-    }
-    return FCPathNameAndExtensions(
-        idx == 0 ? '' : bn.substring(0, idx), bn.substring(idx));
   }
 }
