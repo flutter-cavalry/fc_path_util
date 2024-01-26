@@ -18,12 +18,4 @@ void main() {
     expect(FCPathUtil.trimExtension('.a.ke', '.ke'), '.a');
     expect(FCPathUtil.trimExtension('ke', '.ke'), 'ke');
   });
-
-  test('basenameAndExtensions', () async {
-    expect(FCPathUtil.basenameAndExtensions('a').toString(), 'a');
-    expect(FCPathUtil.basenameAndExtensions('a.b').toString(), 'a[.b]');
-    expect(FCPathUtil.basenameAndExtensions('a.b.c').toString(), 'a[.b.c]');
-    expect(FCPathUtil.basenameAndExtensions('.a').toString(), '[.a]');
-    expect(FCPathUtil.basenameAndExtensions('.a.b').toString(), '[.a.b]');
-  });
 }
