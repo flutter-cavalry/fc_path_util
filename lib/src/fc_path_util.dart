@@ -1,5 +1,3 @@
-import 'package:path/path.dart' as p;
-
 Set<String> _ignoredFiles = {'.DS_Store', 'Thumbs.db'};
 Set<String> _ignoredFolders = {'\$RECYCLE.BIN', 'System Volume Information'};
 
