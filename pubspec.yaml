@@ -1,10 +1,10 @@
 name: fc_path_util
 description: Helper methods for dart `path` package.
-version: 1.1.0
+version: 1.1.1
 repository: https://github.com/flutter-cavalry/fc_path_util
 
 environment:
-  sdk: ">=2.19.5 <3.0.0"
+  sdk: ">=2.19.5 <4.0.0"
 
 dev_dependencies:
   lints: ^4.0.0
