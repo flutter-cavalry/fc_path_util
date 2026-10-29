@@ -1,3 +1,3 @@
-library fc_path_util;
+library;
 
 export 'src/fc_path_util.dart';
